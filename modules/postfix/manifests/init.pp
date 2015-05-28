@@ -3,4 +3,7 @@ class postfix {
 	ensure => "installed"
 	}
 
+	service { "postfix":
+	ensure => "running"
+	}
 }
