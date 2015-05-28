@@ -1,0 +1,16 @@
+{
+  "nodes": {
+    "apps": {
+      ":node": "ApplicationServer-201",
+      ":host": "apps.server-201",
+      "ports": [
+        {
+          ":host": 2201,
+          ":guest": 22,
+          ":id": "ssh"
+        }
+      ],
+      ":memory": 768
+    }
+	}
+}
