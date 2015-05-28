@@ -2,12 +2,18 @@
   "nodes": {
     "apps": {
       ":node": "ApplicationServer-201",
+	  ":ip": "192.168.33.21",
       ":host": "apps.server-201",
       "ports": [
         {
           ":host": 2201,
           ":guest": 22,
           ":id": "ssh"
+        },
+        {
+          ":host": 7709,
+          ":guest": 7709,
+          ":id": "wls-listen"
         }
       ],
       ":memory": 768
