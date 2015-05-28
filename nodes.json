@@ -2,7 +2,7 @@
   "nodes": {
     "apps": {
       ":node": "ApplicationServer-201",
-	  ":ip": "192.168.33.21",
+	  ":ip":   "10.1.1.6",
       ":host": "apps.server-201",
       "ports": [
         {

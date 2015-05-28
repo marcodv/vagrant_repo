@@ -18,7 +18,7 @@ nodes_config.each do |node|
       end
       config.vm.hostname = node_values[':node']
       #=========questa direttiva da l'ip per il server
-	  config.vm.network :private_network, ip: node_values[':ip']
+	  config.vm.network :public_network, ip: node_values[':ip']
 	  #":ip": "192.168.33.21",
 	  
 	  config.vm.provider :virtualbox do |vb|
