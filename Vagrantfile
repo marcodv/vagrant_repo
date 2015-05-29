@@ -30,8 +30,8 @@ config.vm.provision :puppet do |puppet|
     puppet.module_path = "modules"
 	puppet.manifests_path = "manifests"
 	puppet.manifest_file = "default.pp"
-	puppet.options = '--verbose --debug '
-	#--hiera_config=hiera/hiera.yaml' 
+	puppet.options = '--verbose --debug'
+	puppet.hiera_config_path = "--hiera_config=hiera/hiera.yaml" 
   end
 end
 end
