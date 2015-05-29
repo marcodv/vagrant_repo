@@ -1,11 +1,15 @@
 class install_apache::install
 {
-package { "httpd":
-	ensure => "installed"
-}
-file { "/var/www/html/index.html":
-	ensure => present,
-	source => "/vagrant/modules/install_apache/files/index.html",
-	require => Package["httpd"]
-	}
+case $::osfamily {
+		RedHat: {
+			$package_to_install = 'httpd'
+			}
+			Debian: {
+			$package_to_install = 'apache'
+			}
+			}
+			package { $package_to_install:
+				ensure => "installed"
+			}
+
 }

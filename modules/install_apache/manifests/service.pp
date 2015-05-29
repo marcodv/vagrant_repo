@@ -1,8 +1,8 @@
 class install_apache::service 
 {
-service { "httpd":
+service { $package_to_install:
 	ensure => "running",
 	enable => "true",
-	require => Package["httpd"]
+	require => Package[$package_to_install]
 }
 }

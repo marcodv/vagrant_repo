@@ -1,3 +1,3 @@
 include install_apache
-include postfix
-include mysql
+#include postfix
+#include mysql
